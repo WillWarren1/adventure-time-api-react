@@ -33,9 +33,14 @@ class Splash extends Component {
                   {this.state.places[i].characters.map((character, j) => {
                     console.log(character)
                     return (
-                      <li key={j}>
-                        {this.state.places[i].characters[j].name}{' '}
-                      </li>
+                      <Link
+                        to={`/character/${
+                          this.state.places[i].characters[j].id
+                        }`}>
+                        <li key={j}>
+                          {this.state.places[i].characters[j].name}{' '}
+                        </li>
+                      </Link>
                     )
                   })}
                 </ul>

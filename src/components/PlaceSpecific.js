@@ -9,7 +9,9 @@ class PlaceSpecific extends Component {
           <span>
             <li>Current Ruler: {this.props.currentRuler}</li>
             <li>Type Of Government: {this.props.typeOfGovernment}</li>
-            <li>Ally: {this.props.greatestAlly}</li>
+            <li>
+              Ally: {this.props.greatestAlly ? this.props.greatestAlly : 'none'}
+            </li>
           </span>
         </ul>
       </>

@@ -11,14 +11,17 @@ class Place extends Component {
   componentDidMount() {
     axios
       .get(`https://localhost:5001/api/Place/${this.props.match.params.place}`)
-      .then(resp => {
-        this.setState({
-          title: resp.data.name,
-          greatestAlly: resp.data.greatestAlly,
-          currentRuler: resp.data.currentRuler,
-          typeOfGovernment: resp.data.typeOfGovernment
-        })
-      })
+      .then(
+        resp => console.log({ resp })
+        //   {
+        //   this.setState({
+        //     title: resp.data.name,
+        //     greatestAlly: resp.data.greatestAlly,
+        //     currentRuler: resp.data.currentRuler,
+        //     typeOfGovernment: resp.data.typeOfGovernment
+        //   })
+        // }
+      )
   }
   render() {
     return (

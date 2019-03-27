@@ -5,13 +5,13 @@ class CharacterSpecific extends Component {
     return (
       <>
         <ul>
-          <h1>
-            {this.props.title} of {this.props.allegiance}
-          </h1>
+          <h1>{this.props.title}</h1>
+          <h2> Tied to {this.props.allegiance} </h2>
+
           <span>
-            <li>{this.props.age}</li>
-            <li>{this.props.placeOfOrigin}</li>
-            <li>{this.props.species}</li>
+            <li>Age: {this.props.age}</li>
+            <li>Originating from {this.props.placeOfOrigin}</li>
+            <li>Species: {this.props.species}</li>
           </span>
         </ul>
       </>
